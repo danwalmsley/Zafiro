@@ -10,6 +10,13 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Microsoft.Xaml.Interactivity;
 
+
+#if NETFX_CORE
+using Popup = Windows.UI.Xaml.Controls.Primitives.Popup;
+#else
+using Popup = Windows.UI.Xaml.Controls.Popup;
+#endif
+
 namespace Zafiro.Uwp.Controls.Behaviors
 {
     public class RubberBandBehavior : Behavior<FrameworkElement>
